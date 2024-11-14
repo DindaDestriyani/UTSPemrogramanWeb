@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pendidikan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        header {
+            align-items: center;
+            display: flex;
+            padding: 20px;
+            background-color: darkred;
+            margin: 0;
+        }
+
+        header img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        .welcome-text {
+            color: white;
+            font-family: 'Times New Roman';
+            text-align: left;
+        }
+
+        .welcome-text h1 {
+            font-size: xx-large;
+            margin: 0;
+        }
+
+        .welcome-text h2 {
+            font-size: large;
+            margin: 5px 0 2px;
+        }
+
+        .welcome-text h4 {
+            font-size: small;
+            margin: 2px 0;
+            
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="smansa.png" alt="logo">
+        <div class="welcome-text">
+            <h1>Selamat Datang di Website Pendidikan</h1>
+            <h2>SMA NEGERI 1 BREBES</h2>
+            <h4>"UNGGUL, BERILMU, DAN BERAKHLAK"</h4>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#content" onclick="showSection('content')">Content</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="Sejarah">
+            <p>SMA Negeri 1 Brebes adalah sebuah sekolah menengah atas yang pertama kali didirikan di Kabupaten Brebes, Jawa Tengah.
+                SMA Negeri 1 Brebes didirikan pada tanggal 16 Agustus 1963 dengan nama SMA Negeri Brebes. 
+                Pendiriannya diresmikan oleh Mochtar yang saat itu menjabat sebagai Gubernur Jawa Tengah. </p>
+        </div>
+        <div class="Fasilitas">
+            <p>Fasilitas yang tersedia di SMA Negeri 1 Brebes meliputi ruang kelas, perpustakaan, laboratorium, ruang musik dan aula. 
+                Jumlah ruang kelas di SMA Negeri 1 Brebes sebanyak 30 ruang kelas. Perpustakaan di SMA Negeri 1 Brebes hanya terdiri dari satu ruangan. 
+                Laboratorium di SMA Negeri 1 Brebes meliputi laboratorium ilmu pengetahuan alam, laboratorium komputer dan laboratorium bahasa. 
+                Laboratorium ilmu pengetahuan alam terbagi menjadi tiga ruangan yaitu laboratorium fisika, laboratorium kimia dan laboratorium biologi. 
+                Laboratorium bahasa dan laboratorium komputer masing-masing terdiri dari satu ruangan. Ruang musik dan aula juga hanya satu ruangan. 
+                Nama aula di SMA Negeri 1 Brebes adalah Aula Wijayakusuma.</p>
+        </div>
+        <div class="Prestasi">
+            <p>Pada tahun pelajaran 2008/2009 siswa kelas XII SMA Negeri 1 Brebes lulus 100%.
+                Dan salah satu siswa kelas XI mengikuti pertukaran pelajar se-ASEAN ke Singapura bernama Renaldi Adhi Nugraha. 
+                Dalam kejuaraan Olimpiade Sains juga masuk dalam tingkat provinsi dan nasional di bidang Fisika.
+                Selain dalam bidang akademik SMA Negeri 1 Brebes juga berprestasi, seperti dalam bidang olahraga maupun seni. 
+                Dalam bidang olahraga seperti basket, voli, tenis, sepak bola, dan lari. Dalam bidang lainnya seperti paduan suara, baca puisi, pidato, cerdas cermat, teater, dan debat bahasa Inggris.</p>
+
+        </div>
+    </section>
+
+    <main id="main-content">
+
+        <section id="home">
+            <h2>Informasi Terkini</h2>
+            <p>Ini adalah halaman Home yang memuat informasi terbaru terkait pendidikan dan berita lainnya.</p>
+        </section>
+
+        <section id="content" style="display:none;">
+            <h2>Form Pendaftaran Siswa Baru</h2>
+            <form>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama"><br><br>
+
+                <label for="nisn">NISN:</label>
+                <input type="text" id="nisn" name="nisn"><br><br>
+
+                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir"><br><br>
+
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat"><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="jurusan">Jurusan Pilihan:</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="ipa">IPA</option>
+                    <option value="ips">IPS</option>
+                    <option value="bahasa">Bahasa</option>
+                </select><br><br>
+
+                <button type="button" onclick="registerStudent()">Daftar Sekarang</button>
+            </form>
+        </section>
+
+        <section id="about" style="display:none;">
+            <h2>Kontak Kami</h2>
+            <p>Untuk informasi lebih lanjut, Anda dapat menghubungi kami melalui:</p>
+            <ul>
+                <li>Email: sman1_bbs@yahoo.co.id</li>
+                <li>Instagram: @sman1brebes</li>
+                <li>TikTok: @sman1brebes</li>
+                <li><a href="https://smansabes.edukati.com">Website Resmi</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Website Pendidikan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('about').style.display = 'none'
+
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
